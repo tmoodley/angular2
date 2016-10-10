@@ -9,12 +9,8 @@ export class CustomerService {
 
     GetCustomers(){
            return this._http.get(URL_CUSTOMER)
-           .map((response: Response) => response.json())
-           .toPromise()
-           .catch((err: any) => {
-           console.log(err);
-           return Promise.reject(err);
-            });
+           .map((response: Response) => response.json());
+           
     }
 
     _handleError(err: any){

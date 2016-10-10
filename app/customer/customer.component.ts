@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ITicket } from '../shared/interfaces';
 
 @Component({
     moduleId: module.id,
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit{ 
     
-    @Input() customer : {id:number, name:string} ;
+    @Input() customer : ITicket;
 
     constructor(){}
     
